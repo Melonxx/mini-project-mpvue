@@ -1,6 +1,6 @@
-<template name="899fba1a">
-  <view class="_div data-v-6fe22f41">
-    <view class="_h1 data-v-6fe22f41">我的小程序</view>
-    <view class="_h1 data-v-6fe22f41">{{motto}}</view>
+<template name="4315d2bc">
+  <view class="_div data-v-d93e2c12">
+    <view class="_h1 data-v-d93e2c12">我的小程序</view>
+    <view class="_h1 data-v-d93e2c12">{{motto}}</view>
   </view>
 </template>

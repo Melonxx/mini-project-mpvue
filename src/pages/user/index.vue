@@ -9,7 +9,7 @@
     </swiper>
 
     <ul class="container log-list">
-      <li v-for="(log, index) in logs" :class="{ red: aa }" :key="index" class="log-item">
+      <li v-for="(log, index) in logs" :class="{ red: aa }" :key="index" class="log-item">npm ru8n dev
         <card :text="(index + 1) + ' . ' + log"></card>
       </li>
     </ul>
