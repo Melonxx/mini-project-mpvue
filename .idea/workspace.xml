@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="952c67b5-6ce1-4d68-96c7-44c8e3434d18" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/wx/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/wx/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/wx/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/dist/wx/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/wx/common/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/wx/common/vendor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/wx/components/card.vue.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/wx/components/card.vue.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/wx/pages/index/index.vue.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/wx/pages/index/index.vue.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/wx/pages/index/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/wx/pages/index/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/wx/pages/index/main.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/wx/pages/index/main.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/user/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/user/index.vue" afterDir="false" />
-    </list>
+    <list default="true" id="952c67b5-6ce1-4d68-96c7-44c8e3434d18" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -59,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/user/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="437">
+              <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
               <folding>
                 <element signature="e#526#568#0" expanded="true" />
               </folding>
@@ -100,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+            <state relative-caret-position="209">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -141,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="130" />
     <option name="width" value="1440" />
@@ -187,6 +176,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -243,16 +233,15 @@
       <workItem from="1561717618739" duration="54000" />
       <workItem from="1561717690263" duration="289000" />
       <workItem from="1561718005148" duration="136000" />
-      <workItem from="1561718159488" duration="2911000" />
+      <workItem from="1561718159488" duration="4157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6141000" />
+    <option name="totallyTimeSpent" value="7387000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13751318" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -268,7 +257,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32998884" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2635575" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.20498915" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -326,13 +315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -342,11 +324,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/user/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        <state relative-caret-position="437">
+          <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
           <folding>
             <element signature="e#526#568#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
