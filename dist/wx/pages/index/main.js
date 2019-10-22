@@ -144,7 +144,7 @@ var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _
     staticClass: "userAvatar"
   }, [_c('img', {
     attrs: {
-      "src": "../../assets/user.jpg",
+      "src": "../../assets/home.jpg",
       "alt": "mimi"
     }
   })])

@@ -2,7 +2,7 @@
   <div class="wrapper">
     <p>肥肥的爱心小店</p>
     <div class="userAvatar">
-      <img src="../../assets/user.jpg" alt="mimi">
+      <img src="../../assets/home.jpg" alt="mimi">
     </div>
     <button @click="goIn">欢迎小可爱进入</button>
   </div>
