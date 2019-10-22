@@ -1,4 +1,4 @@
-<template name="33116d08">
+<template name="2fa87fe4">
   <view class="_div data-v-f6c43ad4">
     <view class="_p data-v-f6c43ad4 card">
       {{text}}

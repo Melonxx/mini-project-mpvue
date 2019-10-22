@@ -101,6 +101,9 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
@@ -110,14 +113,13 @@ if (false) {(function () {
   },
 
   methods: {
-    clickHandle: function clickHandle(ev) {
-      console.log('clickHandle:', ev);
-      // throw {message: 'custom test'}
+    goIn: function goIn() {
+      wx.navigateTo({
+        url: '../user/main'
+      });
     }
   },
-  created: function created() {
-    console.log(getApp());
-  }
+  mounted: function mounted() {}
 });
 
 /***/ }),
@@ -126,9 +128,27 @@ if (false) {(function () {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('h1', [_vm._v("我的小程序")]), _vm._v(" "), _c('h1', [_vm._v(_vm._s(_vm.motto))])], 1)
+  return _c('div', {
+    staticClass: "wrapper"
+  }, [_c('p', [_vm._v("肥肥的爱心小店")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('button', {
+    attrs: {
+      "eventid": '0'
+    },
+    on: {
+      "click": _vm.goIn
+    }
+  }, [_vm._v("欢迎小可爱进入")])], 1)
 }
-var staticRenderFns = []
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "userAvatar"
+  }, [_c('img', {
+    attrs: {
+      "src": "../../assets/user.jpg",
+      "alt": "mimi"
+    }
+  })])
+}]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

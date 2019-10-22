@@ -1,7 +1,10 @@
 <template>
-  <div>
-    <h1>我的小程序</h1>
-    <h1>{{motto}}</h1>
+  <div class="wrapper">
+    <p>肥肥的爱心小店</p>
+    <div class="userAvatar">
+      <img src="../../assets/user.jpg" alt="mimi">
+    </div>
+    <button @click="goIn">欢迎小可爱进入</button>
   </div>
 </template>
 
@@ -13,17 +16,39 @@ export default {
     }
   },
   methods: {
-    clickHandle (ev) {
-      console.log('clickHandle:', ev)
-      // throw {message: 'custom test'}
+    goIn() {
+      wx.navigateTo({
+        url: '../user/main'
+      })
     }
   },
-  created () {
-    console.log(getApp())
+  mounted () {
   }
 }
 </script>
 
 <style scoped>
-
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+  .userAvatar {
+    text-align: center;
+  }
+  .userAvatar img {
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+  }
+  p {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  button {
+    width: 80vw;
+    margin-top: 2em;
+  }
 </style>

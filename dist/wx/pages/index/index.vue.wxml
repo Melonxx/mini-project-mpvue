@@ -1,6 +1,8 @@
-<template name="4315d2bc">
-  <view class="_div data-v-d93e2c12">
-    <view class="_h1 data-v-d93e2c12">我的小程序</view>
-    <view class="_h1 data-v-d93e2c12">{{motto}}</view>
+<template name="1192e27e">
+  <view class="_div data-v-d93e2c12 wrapper">
+    <view class="_p data-v-d93e2c12">肥肥的爱心小店</view>
+    <view class="_div data-v-d93e2c12 userAvatar">
+      <image src="/assets/user.jpg" alt="mimi" class="_img data-v-d93e2c12"></image>
+    </view> <button bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_button data-v-d93e2c12">欢迎小可爱进入</button>
   </view>
 </template>
