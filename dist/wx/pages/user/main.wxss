@@ -136,6 +136,9 @@
   border-top: 2rpx solid #eee;
   background-color: #fff;
 }
+.countBar .icon.data-v-ee654148 {
+  color: #ff2d2d;
+}
 .countBar .price.data-v-ee654148 {
   flex: 1;
   padding-left: .6em;

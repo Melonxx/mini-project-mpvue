@@ -143,7 +143,6 @@ export default {
   border-top: 1px solid #eee;
   font-size: 3.4vw;
 }
-.mainBar-content li {}
 .mainBar-content li > p {
   background-color: #f8f8f8;
   color: #777575;
@@ -220,7 +219,9 @@ export default {
   border-top: 1px solid #eee;
   background-color: #fff;
 }
-.countBar .icon {}
+.countBar .icon {
+  color: #ff2d2d;
+}
 .countBar .price {
   flex: 1;
   padding-left: .6em;
