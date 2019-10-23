@@ -1,20 +1,8 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([1],[
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
+global.webpackJsonpMpvue([1],{
+
+/***/ 13:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29,7 +17,8 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MOD
 app.$mount();
 
 /***/ }),
-/* 14 */
+
+/***/ 14:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82,16 +71,20 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 15 */
+
+/***/ 15:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 16 */
+
+/***/ 16:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_user_jpg__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_user_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__assets_user_jpg__);
 //
 //
 //
@@ -116,23 +109,77 @@ if (false) {(function () {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
-    return {};
+    return {
+      scrollTop: 0,
+      menuList: {
+        '新鲜水果': [{ img: __webpack_require__(23), title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }],
+        '水果拼盘': [{ img: '../../assets/user.jpg', title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }],
+        '鲜切水果': [{ img: __WEBPACK_IMPORTED_MODULE_0__assets_user_jpg___default.a, title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }],
+        '进口水果': [{ img: '', title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }]
+      }
+    };
   },
-  created: function created() {}
+  mounted: function mounted() {},
+  onPageScroll: function onPageScroll(ev) {
+    this.scrollTop = ev.scrollTop;
+  },
+
+  methods: {
+    initScroll: function initScroll() {
+      console.log(1111);
+    }
+  }
 });
 
 /***/ }),
-/* 17 */
+
+/***/ 17:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  return _c('scroll-view', {
     staticClass: "storeWrapper"
   }, [_c('div', {
+    staticClass: "storeTopWrapper"
+  }, [_c('div', {
+    ref: "storeTop",
     staticClass: "storeTop"
   }, [_c('img', {
     staticClass: "storeTop-img",
@@ -142,7 +189,39 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }
   }), _vm._v(" "), _c('div', {
     staticClass: "storeTop-info"
-  }, [_c('h1', [_vm._v("肥肥的店（zch）")]), _vm._v(" "), _c('p', [_vm._v("公示：热烈庆祝肥肥生日庆典，即刻开始享受生日大礼包，先到先得哦~")])], 1)]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('div', {
+  }, [_c('h1', [_vm._v("肥肥的店（zch）")]), _vm._v(" "), _c('p', [_vm._v("公告：热烈庆祝肥肥生日庆典，即刻开始享受生日大礼包，先到先得哦~")])], 1)]), _vm._v(" "), _c('div', {
+    staticClass: "noticeBar"
+  }, [_c('span', {
+    staticClass: "em"
+  }, [_vm._v("满减")]), _vm._v(" "), _c('span', {
+    staticClass: "info"
+  }, [_vm._v("在线支付满520加13，满521加14")])])]), _vm._v(" "), _c('div', {
+    staticClass: "mainBar"
+  }, [_c('div', {
+    staticClass: "mainBar-menu"
+  }, [_c('ul', _vm._l((_vm.menuList), function(item, key) {
+    return _c('li', {
+      key: key
+    }, [_vm._v(_vm._s(key))])
+  }))], 1), _vm._v(" "), _c('div', {
+    staticClass: "mainBar-content"
+  }, [_c('ul', _vm._l((_vm.menuList), function(item, key) {
+    return _c('li', {
+      key: key
+    }, [_c('p', [_vm._v(_vm._s(key))]), _vm._v(" "), _vm._l((item), function(product, index) {
+      return _c('div', {
+        key: product.title
+      }, [_c('img', {
+        attrs: {
+          "src": item.img
+        }
+      }), _vm._v(" "), _c('div', [_c('strong', [_vm._v(_vm._s(product.title))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(product.info))]), _vm._v(" "), _c('div', [_c('span', [_vm._v("￥" + _vm._s(product.price))]), _vm._v(" "), _c('div', [_c('button', {
+        staticClass: "minus"
+      }, [_vm._v("-")]), _vm._v(" "), _c('span', [_vm._v(_vm._s(product.num))]), _vm._v(" "), _c('button', {
+        staticClass: "add"
+      }, [_vm._v("+")])], 1)])], 1)])
+    })], 2)
+  }))], 1)]), _vm._v(" "), _c('div', {
     staticClass: "countBar"
   }, [_c('div', {
     staticClass: "icon"
@@ -152,15 +231,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "button"
   }, [_vm._v("去结算")])])])
 }
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "noticeBar"
-  }, [_c('span', {
-    staticClass: "em"
-  }, [_vm._v("满减")]), _vm._v(" "), _c('span', {
-    staticClass: "info"
-  }, [_vm._v("在线支付满520加13，满521加14")])])
-}]
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -171,5 +242,13 @@ if (false) {
   }
 }
 
+/***/ }),
+
+/***/ 23:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/user.jpg";
+
 /***/ })
-],[13]);
+
+},[13]);

@@ -1,13 +1,39 @@
 <template name="0aa8193b">
-  <view class="_div data-v-ee654148 storeWrapper">
-    <view class="_div data-v-ee654148 storeTop">
-      <image class="_img data-v-ee654148 storeTop-img" src="/assets/user.jpg" alt="logo"></image>
-      <view class="_div data-v-ee654148 storeTop-info">
-        <view class="_h1 data-v-ee654148">肥肥的店（zch）</view>
-        <view class="_p data-v-ee654148">公示：热烈庆祝肥肥生日庆典，即刻开始享受生日大礼包，先到先得哦~</view>
+  <scroll-view class="_scroll-view data-v-ee654148 storeWrapper">
+    <view class="_div data-v-ee654148 storeTopWrapper">
+      <view ref="storeTop" class="_div data-v-ee654148 storeTop">
+        <image class="_img data-v-ee654148 storeTop-img" src="/assets/user.jpg" alt="logo"></image>
+        <view class="_div data-v-ee654148 storeTop-info">
+          <view class="_h1 data-v-ee654148">肥肥的店（zch）</view>
+          <view class="_p data-v-ee654148">公告：热烈庆祝肥肥生日庆典，即刻开始享受生日大礼包，先到先得哦~</view>
+        </view>
+      </view>
+      <view class="_div data-v-ee654148 noticeBar"><label class="_span data-v-ee654148 em">满减</label> <label class="_span data-v-ee654148 info">在线支付满520加13，满521加14</label></view>
+    </view>
+    <view class="_div data-v-ee654148 mainBar">
+      <view class="_div data-v-ee654148 mainBar-menu">
+        <view class="_ul data-v-ee654148">
+          <view wx:key="key" key="{{key}}" wx:for="{{menuList}}" wx:for-index="key" wx:for-item="item" class="_li data-v-ee654148">{{ key }}</view>
+        </view>
+      </view>
+      <view class="_div data-v-ee654148 mainBar-content">
+        <view class="_ul data-v-ee654148">
+          <view wx:key="key" key="{{key}}" wx:for="{{menuList}}" wx:for-index="key" wx:for-item="item" class="_li data-v-ee654148">
+            <view class="_p data-v-ee654148">{{ key }}</view>
+            <view wx:key="product.title" key="{{product.title}}" wx:for="{{item}}" wx:for-index="index" wx:for-item="product" class="_div data-v-ee654148">
+              <image src="{{item.img}}" class="_img data-v-ee654148"></image>
+              <view class="_div data-v-ee654148">
+                <view class="_strong data-v-ee654148">{{ product.title }}</view>
+                <view class="_p data-v-ee654148">{{ product.info }}</view>
+                <view class="_div data-v-ee654148"><label class="_span data-v-ee654148">￥{{ product.price }}</label>
+                  <view class="_div data-v-ee654148"><button class="_button data-v-ee654148 minus">-</button> <label class="_span data-v-ee654148">{{ product.num }}</label> <button class="_button data-v-ee654148 add">+</button></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
       </view>
     </view>
-    <view class="_div data-v-ee654148 noticeBar"><label class="_span data-v-ee654148 em">满减</label> <label class="_span data-v-ee654148 info">在线支付满520加13，满521加14</label></view>
     <view class="_div data-v-ee654148 countBar">
       <view class="_div data-v-ee654148 icon">100</view>
       <view class="_div data-v-ee654148 price">
@@ -16,5 +42,5 @@
       </view>
       <view class="_div data-v-ee654148 button">去结算</view>
     </view>
-  </view>
+  </scroll-view>
 </template>

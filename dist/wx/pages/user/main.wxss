@@ -1,4 +1,7 @@
 
+.storeWrapper.data-v-ee654148 {
+  padding-bottom: 3.6em;
+}
 .storeTop.data-v-ee654148 {
   width: 100vw;
   padding: 3vw;
@@ -30,6 +33,9 @@
   background-color: rgba(0,0,0,.86);
   color: #ddd;
   padding: .6em 3vw;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 .noticeBar .em.data-v-ee654148 {
   background-color: #c03;
@@ -38,6 +44,84 @@
 }
 .noticeBar .info.data-v-ee654148 {
   padding-left: .6em;
+}
+.mainBar.data-v-ee654148 {
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+.mainBar-menu.data-v-ee654148 {
+  background-color: #f8f8f8;
+}
+.mainBar-menu ._li.data-v-ee654148 {
+  white-space: nowrap;
+  padding: 1em;
+  color: #8f8e8e;
+  border-top: 2rpx solid #eee;
+  font-size: 3.4vw;
+}
+.mainBar-content ._li > ._p.data-v-ee654148 {
+  background-color: #f8f8f8;
+  color: #777575;
+  font-size: 3.2vw;
+  padding: .4em .8em;
+}
+.mainBar-content ._li > ._div.data-v-ee654148 {
+  font-size: 3.2vw;
+  padding: .8em;
+  display: flex;
+}
+.mainBar-content ._li > ._div > ._img.data-v-ee654148 {
+  width: 5em;
+  height: 5em;
+}
+.mainBar-content ._li > ._div > ._div.data-v-ee654148 {
+  font-size: 3.2vw;
+  padding-left: .8em;
+}
+.mainBar-content ._li > ._div > ._div > ._strong.data-v-ee654148 {
+  font-size: 4vw;
+  font-weight: bold;
+}
+.mainBar-content ._li > ._div > ._div > ._p.data-v-ee654148 {
+  color: #aaa;
+  font-size: 3vw;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.mainBar-content ._li > ._div > ._div > ._div.data-v-ee654148 {
+  display: flex;
+  justify-content: space-between;
+}
+.mainBar-content ._li > ._div > ._div > ._div > ._span.data-v-ee654148 {
+  color: #ff2d2d;
+  font-size: 3.6vw;
+  font-weight: bold;
+}
+.mainBar-content ._li > ._div > ._div > ._div > ._div.data-v-ee654148 {
+  display: flex;
+  align-items: center;
+}
+.mainBar-content ._li > ._div > ._div > ._div > ._div > ._span.data-v-ee654148 {
+  margin: 0 .8em;
+}
+.mainBar-content ._li > ._div > ._div > ._div > ._div > ._button.data-v-ee654148 {
+  border-radius: 50%;
+  width: .6em;
+  height: .6em;
+  padding: .2em;
+  line-height: .4;
+  box-sizing: content-box;
+  font-weight: bold;
+}
+.mainBar-content ._li > ._div > ._div > ._div > ._div > ._button.minus.data-v-ee654148 {
+  border: 2rpx solid #aeaead;
+  color: #ff2d2d;
+}
+.mainBar-content ._li > ._div > ._div > ._div > ._div > ._button.add.data-v-ee654148 {
+  border: 2rpx solid #ff2d2d;
+  background-color: #ff2d2d;
+  color: #fff;
 }
 .countBar.data-v-ee654148 {
   display: flex;
@@ -50,6 +134,7 @@
   bottom: 0;
   width: 100%;
   border-top: 2rpx solid #eee;
+  background-color: #fff;
 }
 .countBar .price.data-v-ee654148 {
   flex: 1;
