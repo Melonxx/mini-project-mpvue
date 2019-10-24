@@ -1,8 +1,20 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([1],{
-
-/***/ 13:
+global.webpackJsonpMpvue([1],[
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17,8 +29,7 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MOD
 app.$mount();
 
 /***/ }),
-
-/***/ 14:
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71,18 +82,18 @@ if (false) {(function () {
 
 
 /***/ }),
-
-/***/ 15:
+/* 15 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-
-/***/ 16:
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+//
+//
 //
 //
 //
@@ -143,7 +154,8 @@ if (false) {(function () {
   data: function data() {
     return {
       scrollTop: 0,
-      menuList: [{ title: '新鲜水果', list: [{ img: __webpack_require__(23), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }, { img: __webpack_require__(23), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] }, { title: '水果拼盘', list: [{ img: __webpack_require__(23), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] }, { title: '鲜切水果', list: [{ img: __webpack_require__(23), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] }, { title: '进口水果', list: [{ img: __webpack_require__(23), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] }]
+      activeMenuIndex: 0,
+      menuList: [{ title: '要亲亲', listNum: 0, list: [{ img: __webpack_require__(24), subTitle: '要亲亲', info: '要亲亲~来亲亲迷人的晓嘴唇', price: 520, num: 0 }] }, { title: '要抱抱', listNum: 0, list: [{ img: __webpack_require__(27), subTitle: '要抱抱', info: '要抱抱~来抱抱晓可爱的小细腿', price: 13, num: 0 }] }, { title: '举高高', listNum: 0, list: [{ img: __webpack_require__(26), subTitle: '举高高', info: '要举高高~来挑战一下举重极限', price: 14, num: 0 }] }, { title: '哄哄我', listNum: 0, list: [{ img: __webpack_require__(25), subTitle: '哄哄我', info: '也不哄哄人家，人家超想哭的，最后的机会，不然你也要完蛋', price: 521, num: 0 }] }]
     };
   },
 
@@ -156,18 +168,43 @@ if (false) {(function () {
         });
       });
       return total;
+    },
+    countTotalNum: function countTotalNum() {
+      var total = 0;
+      this.menuList.map(function (v) {
+        v.list.map(function (list) {
+          total += list.num;
+        });
+      });
+      return total;
     }
   },
-  mounted: function mounted() {},
+  watch: {
+    menuList: {
+      deep: true,
+      handler: function handler() {
+        this.menuList.map(function (v) {
+          var total = 0;
+          v.list.map(function (item) {
+            total += item.num;
+          });
+          v.listNum = total;
+        });
+      },
+      immediate: true
+    }
+  },
   onPageScroll: function onPageScroll(ev) {
     this.scrollTop = ev.scrollTop;
   },
 
   methods: {
     listNum: function listNum(item) {
-      return item.reduce(function (a, b) {
-        return a.num + b.num;
-      }, 0);
+      var total = 0;
+      item.list.map(function (v) {
+        total += v.num;
+      });
+      return total;
     },
     calculate: function calculate(product, operator) {
       if (operator === 'minus') {
@@ -178,16 +215,12 @@ if (false) {(function () {
       } else if (operator === 'add') {
         product.num += 1;
       }
-    },
-    initScroll: function initScroll() {
-      console.log(1111);
     }
   }
 });
 
 /***/ }),
-
-/***/ 17:
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -220,10 +253,19 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, [_c('ul', _vm._l((_vm.menuList), function(item, index) {
     return _c('li', {
       key: index,
+      class: {
+        active: index === _vm.activeMenuIndex, num: item.listNum !== 0
+      },
       attrs: {
-        "num": _vm.listNum(item.list)
+        "data-num": item.listNum,
+        "eventid": '0_' + index
+      },
+      on: {
+        "click": function($event) {
+          _vm.activeMenuIndex = index
+        }
       }
-    }, [_vm._v(_vm._s(item.title + _vm.listNum(item.list)))])
+    }, [_vm._v(_vm._s(item.title))])
   }))], 1), _vm._v(" "), _c('div', {
     staticClass: "mainBar-content"
   }, [_c('ul', _vm._l((_vm.menuList), function(item, key) {
@@ -239,7 +281,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       }), _vm._v(" "), _c('div', [_c('strong', [_vm._v(_vm._s(product.subTitle))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(product.info))]), _vm._v(" "), _c('div', [_c('span', [_vm._v("￥" + _vm._s(product.price))]), _vm._v(" "), _c('div', [_c('button', {
         staticClass: "minus",
         attrs: {
-          "eventid": '0_' + key + '-' + index
+          "eventid": '1_' + key + '-' + index
         },
         on: {
           "click": function($event) {
@@ -249,7 +291,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       }, [_vm._v("-")]), _vm._v(" "), _c('span', [_vm._v(_vm._s(product.num))]), _vm._v(" "), _c('button', {
         staticClass: "add",
         attrs: {
-          "eventid": '1_' + key + '-' + index
+          "eventid": '2_' + key + '-' + index
         },
         on: {
           "click": function($event) {
@@ -262,7 +304,12 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "countBar"
   }, [_c('div', {
     staticClass: "icon"
-  }, [_vm._v("100")]), _vm._v(" "), _c('div', {
+  }, [_c('img', {
+    attrs: {
+      "data-totalNum": _vm.countTotalNum,
+      "src": "../../assets/cart.png"
+    }
+  })]), _vm._v(" "), _c('div', {
     staticClass: "price"
   }, [_c('p', [_vm._v("￥" + _vm._s(_vm.calculateTotalPrice))]), _vm._v(" "), _c('p', [_vm._v("无需配送费")])], 1), _vm._v(" "), _c('div', {
     staticClass: "button"
@@ -280,12 +327,34 @@ if (false) {
 }
 
 /***/ }),
-
-/***/ 23:
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "img/user.jpg";
+module.exports = __webpack_require__.p + "img/love (1).jpg";
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (2).jpg";
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (7).jpg";
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (9).jpg";
 
 /***/ })
-
-},[13]);
+],[13]);

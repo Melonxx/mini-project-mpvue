@@ -60,26 +60,37 @@
   border-top: 2rpx solid #eee;
   font-size: 3.4vw;
   position: relative;
+  font-weight: 500;
 }
-.mainBar-menu ._li.data-v-ee654148::before,
-.mainBar-menu ._li.data-v-ee654148::after {
+.mainBar-menu ._li.active.data-v-ee654148 {
+  background-color: #fff;
+  color: #000;
+}
+.mainBar-menu ._li.active.data-v-ee654148::before,
+.mainBar-menu ._li.num.data-v-ee654148::after,
+.countBar .icon ._img.data-v-ee654148::after {
   content: '';
   position: absolute;
 }
-.mainBar-menu ._li.data-v-ee654148::before {
+.mainBar-menu ._li.active.data-v-ee654148::before {
   width: .2em;
   height: 100%;
   background-color: #ff2d2d;
   left: 0;
   top: 0;
 }
-.mainBar-menu ._li.data-v-ee654148::after {
-  content: attr(num);
+.mainBar-menu ._li.num.data-v-ee654148::after,
+.countBar .icon ._img.data-v-ee654148::after {
+  width: 1em;
+  height: 1em;
+  content: attr(data-num);
   border-radius: 50%;
   background-color: #ff2d2d;
   color: #fff;
   text-align: center;
-  padding: .2em;
+  padding: .3em;
+  font-size: 2vw;
+  line-height: 1;
 }
 .mainBar-content ._li > ._p.data-v-ee654148 {
   background-color: #f8f8f8;
@@ -91,6 +102,10 @@
   font-size: 3.2vw;
   padding: .8em;
   display: flex;
+  border-bottom: 2rpx solid #eee;
+}
+.mainBar-content ._li > ._div.data-v-ee654148:last-child {
+  border-bottom: none;
 }
 .mainBar-content ._li > ._div > ._img.data-v-ee654148 {
   width: 5em;
@@ -99,6 +114,7 @@
 .mainBar-content ._li > ._div > ._div.data-v-ee654148 {
   font-size: 3.2vw;
   padding-left: .8em;
+  flex: 1;
 }
 .mainBar-content ._li > ._div > ._div > ._strong.data-v-ee654148 {
   font-size: 4vw;
@@ -157,8 +173,20 @@
   border-top: 2rpx solid #eee;
   background-color: #fff;
 }
-.countBar .icon.data-v-ee654148 {
+.countBar .icon ._img.data-v-ee654148 {
   color: #ff2d2d;
+  width: 1.8em;
+  height: 1.8em;
+  position: relative;
+  overflow: visible;
+}
+.countBar .icon ._img.data-v-ee654148::after {
+  content: attr(data-totalNum);
+  border: 2rpx solid #fff;
+  font-size: 1.8vw;
+  right: -.2em;
+  top: 0;
+  line-height: 1;
 }
 .countBar .price.data-v-ee654148 {
   flex: 1;

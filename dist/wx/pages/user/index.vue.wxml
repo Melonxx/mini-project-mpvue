@@ -13,7 +13,7 @@
     <view class="_div data-v-ee654148 mainBar">
       <view class="_div data-v-ee654148 mainBar-menu">
         <view class="_ul data-v-ee654148">
-          <view wx:key="index" key="{{index}}" num="{{listNum(item.list)}}" wx:for="{{menuList}}" wx:for-index="index" wx:for-item="item" class="_li data-v-ee654148">{{ item.title + listNum(item.list) }}</view>
+          <view wx:key="index" key="{{index}}" data-num="{{item.listNum}}" bindtap="handleProxy" data-eventid="{{'0_'+index}}" data-comkey="{{$k}}" wx:for="{{menuList}}" wx:for-index="index" wx:for-item="item" class="_li data-v-ee654148 {{[index === activeMenuIndex ? 'active' : '', item.listNum !== 0 ? 'num' : '']}}">{{ item.title }}</view>
         </view>
       </view>
       <view class="_div data-v-ee654148 mainBar-content">
@@ -26,7 +26,7 @@
                 <view class="_strong data-v-ee654148">{{ product.subTitle }}</view>
                 <view class="_p data-v-ee654148">{{ product.info }}</view>
                 <view class="_div data-v-ee654148"><label class="_span data-v-ee654148">￥{{ product.price }}</label>
-                  <view class="_div data-v-ee654148"><button class="_button data-v-ee654148 minus" bindtap="handleProxy" data-eventid="{{'0_'+key+'-'+index}}" data-comkey="{{$k}}">-</button> <label class="_span data-v-ee654148">{{ product.num }}</label> <button class="_button data-v-ee654148 add" bindtap="handleProxy" data-eventid="{{'1_'+key+'-'+index}}" data-comkey="{{$k}}">+</button></view>
+                  <view class="_div data-v-ee654148"><button class="_button data-v-ee654148 minus" bindtap="handleProxy" data-eventid="{{'1_'+key+'-'+index}}" data-comkey="{{$k}}">-</button> <label class="_span data-v-ee654148">{{ product.num }}</label> <button class="_button data-v-ee654148 add" bindtap="handleProxy" data-eventid="{{'2_'+key+'-'+index}}" data-comkey="{{$k}}">+</button></view>
                 </view>
               </view>
             </view>
@@ -35,7 +35,9 @@
       </view>
     </view>
     <view class="_div data-v-ee654148 countBar">
-      <view class="_div data-v-ee654148 icon">100</view>
+      <view class="_div data-v-ee654148 icon">
+        <image data-totalNum="{{countTotalNum}}" src="/assets/cart.png" class="_img data-v-ee654148"></image>
+      </view>
       <view class="_div data-v-ee654148 price">
         <view class="_p data-v-ee654148">￥{{ calculateTotalPrice }}</view>
         <view class="_p data-v-ee654148">无需配送费</view>

@@ -16,7 +16,7 @@
     <div class="mainBar">
       <div class="mainBar-menu">
         <ul>
-          <li v-for="(item, index) in menuList" :key="index" :num="listNum(item.list)">{{ item.title + listNum(item.list) }}</li>
+          <li v-for="(item, index) in menuList" :key="index" :class="{active: index === activeMenuIndex, num: item.listNum !== 0}" :data-num="item.listNum" @click="activeMenuIndex=index">{{ item.title }}</li>
         </ul>
       </div>
       <div class="mainBar-content">
@@ -43,7 +43,9 @@
       </div>
     </div>
     <div class="countBar">
-      <div class="icon">100</div>
+      <div class="icon">
+        <img :data-totalNum="countTotalNum" src="../../assets/cart.png">
+      </div>
       <div class="price">
         <p>￥{{ calculateTotalPrice }}</p>
         <p>无需配送费</p>
@@ -58,11 +60,20 @@ export default {
   data() {
     return {
       scrollTop: 0,
+      activeMenuIndex: 0,
       menuList: [
-        { title: '新鲜水果', list: [{ img: require('../../assets/user.jpg'), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }, { img: require('../../assets/user.jpg'), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] },
-        { title: '水果拼盘', list: [{ img: require('../../assets/user.jpg'), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] },
-        { title: '鲜切水果', list: [{ img: require('../../assets/user.jpg'), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] },
-        { title: '进口水果', list: [{ img: require('../../assets/user.jpg'), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] }
+        { title: '要亲亲', listNum: 0, list: [
+          { img: require('../../assets/love (1).jpg'), subTitle: '要亲亲', info: '要亲亲~来亲亲迷人的晓嘴唇', price: 520, num: 0 }
+        ]},
+        { title: '要抱抱', listNum: 0, list: [
+          { img: require('../../assets/love (9).jpg'), subTitle: '要抱抱', info: '要抱抱~来抱抱晓可爱的小细腿', price: 13, num: 0 }
+        ]},
+        { title: '举高高', listNum: 0, list: [
+          { img: require('../../assets/love (7).jpg'), subTitle: '举高高', info: '要举高高~来挑战一下举重极限', price: 14, num: 0 }
+        ]},
+        { title: '哄哄我', listNum: 0, list: [
+          { img: require('../../assets/love (2).jpg'), subTitle: '哄哄我', info: '也不哄哄人家，人家超想哭的，最后的机会，不然你也要完蛋', price: 521, num: 0 }
+        ]}
       ]
     }
   },
@@ -75,16 +86,42 @@ export default {
         })
       })
       return total
+    },
+    countTotalNum() {
+      let total = 0
+      this.menuList.map(v => {
+        v.list.map(list => {
+          total += list.num
+        })
+      })
+      return total
     }
   },
-  mounted() {
+  watch: {
+    menuList: {
+      deep: true,
+      handler: function () {
+        this.menuList.map(v => {
+          let total = 0
+          v.list.map(item => {
+            total += item.num
+          })
+          v.listNum = total
+        })
+      },
+      immediate: true
+    }
   },
   onPageScroll(ev) {
     this.scrollTop = ev.scrollTop
   },
   methods: {
     listNum(item) {
-      return item.reduce((a, b) => a.num + b.num, 0)
+      let total = 0
+      item.list.map(v => {
+        total += v.num
+      })
+      return total
     },
     calculate(product, operator) {
       if (operator === 'minus') {
@@ -95,9 +132,6 @@ export default {
       } else if (operator === 'add') {
         product.num += 1
       }
-    },
-    initScroll() {
-      console.log(1111)
     }
   }
 }
@@ -165,25 +199,34 @@ export default {
   border-top: 1px solid #eee;
   font-size: 3.4vw;
   position: relative;
+  font-weight: 500;
 }
-.mainBar-menu li::before, .mainBar-menu li::after {
+.mainBar-menu li.active {
+  background-color: #fff;
+  color: #000;
+}
+.mainBar-menu li.active::before, .mainBar-menu li.num::after, .countBar .icon img::after {
   content: '';
   position: absolute;
 }
-.mainBar-menu li::before {
+.mainBar-menu li.active::before {
   width: .2em;
   height: 100%;
   background-color: #ff2d2d;
   left: 0;
   top: 0;
 }
-.mainBar-menu li::after {
-  content: attr(num);
+.mainBar-menu li.num::after, .countBar .icon img::after {
+  width: 1em;
+  height: 1em;
+  content: attr(data-num);
   border-radius: 50%;
   background-color: #ff2d2d;
   color: #fff;
   text-align: center;
-  padding: .2em;
+  padding: .3em;
+  font-size: 2vw;
+  line-height: 1;
 }
 .mainBar-content li > p {
   background-color: #f8f8f8;
@@ -195,6 +238,10 @@ export default {
   font-size: 3.2vw;
   padding: .8em;
   display: flex;
+  border-bottom: 1px solid #eee;
+}
+.mainBar-content li > div:last-child {
+  border-bottom: none;
 }
 .mainBar-content li > div > img {
   width: 5em;
@@ -203,6 +250,7 @@ export default {
 .mainBar-content li > div > div {
   font-size: 3.2vw;
   padding-left: .8em;
+  flex: 1;
 }
 .mainBar-content li > div > div > strong {
   font-size: 4vw;
@@ -261,8 +309,20 @@ export default {
   border-top: 1px solid #eee;
   background-color: #fff;
 }
-.countBar .icon {
+.countBar .icon img {
   color: #ff2d2d;
+  width: 1.8em;
+  height: 1.8em;
+  position: relative;
+  overflow: visible;
+}
+.countBar .icon img::after {
+  content: attr(data-totalNum);
+  border: 1px solid #fff;
+  font-size: 1.8vw;
+  right: -.2em;
+  top: 0;
+  line-height: 1;
 }
 .countBar .price {
   flex: 1;
