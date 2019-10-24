@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper">
-    <span @click="returnBack">返回</span>
     <div class="payImg">
       <img src="../../assets/pay.png" alt="mimi">
     </div>
@@ -8,20 +7,6 @@
     <p>请及时找商家核销</p>
   </div>
 </template>
-
-<script>
-export default {
-  methods: {
-    returnBack() {
-      wx.navigateTo({
-        url: '../user/main'
-      })
-    }
-  },
-  mounted () {
-  }
-}
-</script>
 
 <style scoped>
 .wrapper {
