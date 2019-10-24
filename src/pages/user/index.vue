@@ -16,24 +16,24 @@
     <div class="mainBar">
       <div class="mainBar-menu">
         <ul>
-          <li v-for="(item, key) in menuList" :key="key">{{ key }}</li>
+          <li v-for="(item, index) in menuList" :key="index" :num="listNum(item.list)">{{ item.title + listNum(item.list) }}</li>
         </ul>
       </div>
       <div class="mainBar-content">
         <ul>
           <li v-for="(item, key) in menuList" :key="key">
-            <p>{{ key }}</p>
-            <div v-for="product in item" :key="product.title">
-              <img :src="item.img">
+            <p>{{ item.title }}</p>
+            <div v-for="product in item.list" :key="product.subTitle">
+              <img :src="product.img">
               <div>
-                <strong>{{ product.title }}</strong>
+                <strong>{{ product.subTitle }}</strong>
                 <p>{{ product.info }}</p>
                 <div>
                   <span>￥{{ product.price }}</span>
                   <div>
-                    <button class="minus">-</button>
+                    <button class="minus" @click="calculate(product, 'minus')">-</button>
                     <span>{{ product.num }}</span>
-                    <button class="add">+</button>
+                    <button class="add" @click="calculate(product, 'add')">+</button>
                   </div>
                 </div>
               </div>
@@ -45,7 +45,7 @@
     <div class="countBar">
       <div class="icon">100</div>
       <div class="price">
-        <p>￥100</p>
+        <p>￥{{ calculateTotalPrice }}</p>
         <p>无需配送费</p>
       </div>
       <div class="button">去结算</div>
@@ -54,18 +54,27 @@
 </template>
 
 <script>
-import img from "../../assets/user.jpg";
-
 export default {
   data() {
     return {
       scrollTop: 0,
-      menuList: {
-        '新鲜水果': [{ img: require('../../assets/user.jpg'), title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }],
-        '水果拼盘': [{ img: '../../assets/user.jpg', title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }],
-        '鲜切水果': [{ img: img, title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }],
-        '进口水果': [{ img: '', title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }]
-        }
+      menuList: [
+        { title: '新鲜水果', list: [{ img: require('../../assets/user.jpg'), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }, { img: require('../../assets/user.jpg'), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] },
+        { title: '水果拼盘', list: [{ img: require('../../assets/user.jpg'), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] },
+        { title: '鲜切水果', list: [{ img: require('../../assets/user.jpg'), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] },
+        { title: '进口水果', list: [{ img: require('../../assets/user.jpg'), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] }
+      ]
+    }
+  },
+  computed: {
+    calculateTotalPrice() {
+      let total = 0
+      this.menuList.map(v => {
+        v.list.map(list => {
+          total += list.price * list.num
+        })
+      })
+      return total
     }
   },
   mounted() {
@@ -74,6 +83,19 @@ export default {
     this.scrollTop = ev.scrollTop
   },
   methods: {
+    listNum(item) {
+      return item.reduce((a, b) => a.num + b.num, 0)
+    },
+    calculate(product, operator) {
+      if (operator === 'minus') {
+        product.num -= 1
+        if (product.num <= 0) {
+          product.num = 0
+        }
+      } else if (operator === 'add') {
+        product.num += 1
+      }
+    },
     initScroll() {
       console.log(1111)
     }
@@ -142,6 +164,26 @@ export default {
   color: #8f8e8e;
   border-top: 1px solid #eee;
   font-size: 3.4vw;
+  position: relative;
+}
+.mainBar-menu li::before, .mainBar-menu li::after {
+  content: '';
+  position: absolute;
+}
+.mainBar-menu li::before {
+  width: .2em;
+  height: 100%;
+  background-color: #ff2d2d;
+  left: 0;
+  top: 0;
+}
+.mainBar-menu li::after {
+  content: attr(num);
+  border-radius: 50%;
+  background-color: #ff2d2d;
+  color: #fff;
+  text-align: center;
+  padding: .2em;
 }
 .mainBar-content li > p {
   background-color: #f8f8f8;

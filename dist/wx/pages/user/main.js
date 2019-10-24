@@ -83,8 +83,6 @@ if (false) {(function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_user_jpg__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__assets_user_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__assets_user_jpg__);
 //
 //
 //
@@ -140,20 +138,25 @@ if (false) {(function () {
 //
 //
 //
-
-
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data: function data() {
     return {
       scrollTop: 0,
-      menuList: {
-        '新鲜水果': [{ img: __webpack_require__(23), title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }],
-        '水果拼盘': [{ img: '../../assets/user.jpg', title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }],
-        '鲜切水果': [{ img: __WEBPACK_IMPORTED_MODULE_0__assets_user_jpg___default.a, title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }],
-        '进口水果': [{ img: '', title: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }]
-      }
+      menuList: [{ title: '新鲜水果', list: [{ img: __webpack_require__(23), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }, { img: __webpack_require__(23), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] }, { title: '水果拼盘', list: [{ img: __webpack_require__(23), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] }, { title: '鲜切水果', list: [{ img: __webpack_require__(23), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] }, { title: '进口水果', list: [{ img: __webpack_require__(23), subTitle: '特级有机牛奶草莓', info: '有机农场种植，纯天然无污染，个头大，非常爆满', price: 38, num: 0 }] }]
     };
+  },
+
+  computed: {
+    calculateTotalPrice: function calculateTotalPrice() {
+      var total = 0;
+      this.menuList.map(function (v) {
+        v.list.map(function (list) {
+          total += list.price * list.num;
+        });
+      });
+      return total;
+    }
   },
   mounted: function mounted() {},
   onPageScroll: function onPageScroll(ev) {
@@ -161,6 +164,21 @@ if (false) {(function () {
   },
 
   methods: {
+    listNum: function listNum(item) {
+      return item.reduce(function (a, b) {
+        return a.num + b.num;
+      }, 0);
+    },
+    calculate: function calculate(product, operator) {
+      if (operator === 'minus') {
+        product.num -= 1;
+        if (product.num <= 0) {
+          product.num = 0;
+        }
+      } else if (operator === 'add') {
+        product.num += 1;
+      }
+    },
     initScroll: function initScroll() {
       console.log(1111);
     }
@@ -199,26 +217,45 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "mainBar"
   }, [_c('div', {
     staticClass: "mainBar-menu"
-  }, [_c('ul', _vm._l((_vm.menuList), function(item, key) {
+  }, [_c('ul', _vm._l((_vm.menuList), function(item, index) {
     return _c('li', {
-      key: key
-    }, [_vm._v(_vm._s(key))])
+      key: index,
+      attrs: {
+        "num": _vm.listNum(item.list)
+      }
+    }, [_vm._v(_vm._s(item.title + _vm.listNum(item.list)))])
   }))], 1), _vm._v(" "), _c('div', {
     staticClass: "mainBar-content"
   }, [_c('ul', _vm._l((_vm.menuList), function(item, key) {
     return _c('li', {
       key: key
-    }, [_c('p', [_vm._v(_vm._s(key))]), _vm._v(" "), _vm._l((item), function(product, index) {
+    }, [_c('p', [_vm._v(_vm._s(item.title))]), _vm._v(" "), _vm._l((item.list), function(product, index) {
       return _c('div', {
-        key: product.title
+        key: product.subTitle
       }, [_c('img', {
         attrs: {
-          "src": item.img
+          "src": product.img
         }
-      }), _vm._v(" "), _c('div', [_c('strong', [_vm._v(_vm._s(product.title))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(product.info))]), _vm._v(" "), _c('div', [_c('span', [_vm._v("￥" + _vm._s(product.price))]), _vm._v(" "), _c('div', [_c('button', {
-        staticClass: "minus"
+      }), _vm._v(" "), _c('div', [_c('strong', [_vm._v(_vm._s(product.subTitle))]), _vm._v(" "), _c('p', [_vm._v(_vm._s(product.info))]), _vm._v(" "), _c('div', [_c('span', [_vm._v("￥" + _vm._s(product.price))]), _vm._v(" "), _c('div', [_c('button', {
+        staticClass: "minus",
+        attrs: {
+          "eventid": '0_' + key + '-' + index
+        },
+        on: {
+          "click": function($event) {
+            _vm.calculate(product, 'minus')
+          }
+        }
       }, [_vm._v("-")]), _vm._v(" "), _c('span', [_vm._v(_vm._s(product.num))]), _vm._v(" "), _c('button', {
-        staticClass: "add"
+        staticClass: "add",
+        attrs: {
+          "eventid": '1_' + key + '-' + index
+        },
+        on: {
+          "click": function($event) {
+            _vm.calculate(product, 'add')
+          }
+        }
       }, [_vm._v("+")])], 1)])], 1)])
     })], 2)
   }))], 1)]), _vm._v(" "), _c('div', {
@@ -227,7 +264,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "icon"
   }, [_vm._v("100")]), _vm._v(" "), _c('div', {
     staticClass: "price"
-  }, [_c('p', [_vm._v("￥100")]), _vm._v(" "), _c('p', [_vm._v("无需配送费")])], 1), _vm._v(" "), _c('div', {
+  }, [_c('p', [_vm._v("￥" + _vm._s(_vm.calculateTotalPrice))]), _vm._v(" "), _c('p', [_vm._v("无需配送费")])], 1), _vm._v(" "), _c('div', {
     staticClass: "button"
   }, [_vm._v("去结算")])])])
 }

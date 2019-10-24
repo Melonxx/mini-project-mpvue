@@ -59,6 +59,27 @@
   color: #8f8e8e;
   border-top: 2rpx solid #eee;
   font-size: 3.4vw;
+  position: relative;
+}
+.mainBar-menu ._li.data-v-ee654148::before,
+.mainBar-menu ._li.data-v-ee654148::after {
+  content: '';
+  position: absolute;
+}
+.mainBar-menu ._li.data-v-ee654148::before {
+  width: .2em;
+  height: 100%;
+  background-color: #ff2d2d;
+  left: 0;
+  top: 0;
+}
+.mainBar-menu ._li.data-v-ee654148::after {
+  content: attr(num);
+  border-radius: 50%;
+  background-color: #ff2d2d;
+  color: #fff;
+  text-align: center;
+  padding: .2em;
 }
 .mainBar-content ._li > ._p.data-v-ee654148 {
   background-color: #f8f8f8;
