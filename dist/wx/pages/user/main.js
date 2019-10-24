@@ -155,7 +155,7 @@ if (false) {(function () {
     return {
       scrollTop: 0,
       activeMenuIndex: 0,
-      menuList: [{ title: '要亲亲', listNum: 0, list: [{ img: __webpack_require__(24), subTitle: '要亲亲', info: '要亲亲~来亲亲迷人的晓嘴唇', price: 520, num: 0 }] }, { title: '要抱抱', listNum: 0, list: [{ img: __webpack_require__(27), subTitle: '要抱抱', info: '要抱抱~来抱抱晓可爱的小细腿', price: 13, num: 0 }] }, { title: '举高高', listNum: 0, list: [{ img: __webpack_require__(26), subTitle: '举高高', info: '要举高高~来挑战一下举重极限', price: 14, num: 0 }] }, { title: '哄哄我', listNum: 0, list: [{ img: __webpack_require__(25), subTitle: '哄哄我', info: '也不哄哄人家，人家超想哭的，最后的机会，不然你也要完蛋', price: 521, num: 0 }] }]
+      menuList: [{ title: '🔥热销', listNum: 0, list: [{ img: __webpack_require__(28), subTitle: '说爱我', info: '这么久没腻歪，赶紧说爱我~', price: 2019, num: 0 }, { img: __webpack_require__(29), subTitle: '揉揉肩', info: '上班一天可真辛苦鸭~', price: 9, num: 0 }, { img: __webpack_require__(26), subTitle: '捏捏腿', info: '天天在运动减肥，怎么就不见人来捏捏腿，=。=', price: 27, num: 0 }] }, { title: '要亲亲', listNum: 0, list: [{ img: __webpack_require__(24), subTitle: '要亲亲', info: '要亲亲~来亲亲迷人的晓嘴唇', price: 520, num: 0 }, { img: __webpack_require__(32), subTitle: '要花花', info: '同事们都收到漂亮的fua fua了，我的呢~', price: 13.14, num: 0 }] }, { title: '要抱抱', listNum: 0, list: [{ img: __webpack_require__(27), subTitle: '要抱抱', info: '要抱抱~来抱抱晓可爱的小细腿', price: 521, num: 0 }, { img: __webpack_require__(33), subTitle: '喵喵喵', info: '撒个娇，卖个萌，别撸代码了，来撸撸乖巧的晓可爱~', price: 1.12, num: 0 }] }, { title: '举高高', listNum: 0, list: [{ img: __webpack_require__(31), subTitle: '举高高', info: '要举高高~长再大也是小公举，也要抱抱举高高，快来挑战一下举重极限', price: 13, num: 0 }, { img: __webpack_require__(30), subTitle: '做饭饭', info: '给你个小爱心，赶紧去老娘做美味的大餐吧~', price: 14, num: 0 }] }, { title: '哄哄我', listNum: 0, list: [{ img: __webpack_require__(25), subTitle: '哄哄我', info: '也不哄哄人家，人家超想哭的，最后的机会，不然你也要完蛋', price: 5.21, num: 0 }] }]
     };
   },
 
@@ -355,6 +355,42 @@ module.exports = __webpack_require__.p + "img/love (7).jpg";
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "img/love (9).jpg";
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (6).jpg";
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (5).jpg";
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (3).jpg";
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (4).jpg";
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (11).jpg";
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (12).jpg";
 
 /***/ })
 ],[13]);

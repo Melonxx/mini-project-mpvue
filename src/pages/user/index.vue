@@ -62,17 +62,25 @@ export default {
       scrollTop: 0,
       activeMenuIndex: 0,
       menuList: [
+        { title: '🔥热销', listNum: 0, list: [
+          { img: require('../../assets/love (6).jpg'), subTitle: '说爱我', info: '这么久没腻歪，赶紧说爱我~', price: 2019, num: 0 },
+          { img: require('../../assets/love (5).jpg'), subTitle: '揉揉肩', info: '上班一天可真辛苦鸭~', price: 9, num: 0 },
+          { img: require('../../assets/love (7).jpg'), subTitle: '捏捏腿', info: '天天在运动减肥，怎么就不见人来捏捏腿，=。=', price: 27, num: 0 },
+        ]},
         { title: '要亲亲', listNum: 0, list: [
-          { img: require('../../assets/love (1).jpg'), subTitle: '要亲亲', info: '要亲亲~来亲亲迷人的晓嘴唇', price: 520, num: 0 }
+          { img: require('../../assets/love (1).jpg'), subTitle: '要亲亲', info: '要亲亲~来亲亲迷人的晓嘴唇', price: 520, num: 0 },
+          { img: require('../../assets/love (11).jpg'), subTitle: '要花花', info: '同事们都收到漂亮的fua fua了，我的呢~', price: 13.14, num: 0 },
         ]},
         { title: '要抱抱', listNum: 0, list: [
-          { img: require('../../assets/love (9).jpg'), subTitle: '要抱抱', info: '要抱抱~来抱抱晓可爱的小细腿', price: 13, num: 0 }
+          { img: require('../../assets/love (9).jpg'), subTitle: '要抱抱', info: '要抱抱~来抱抱晓可爱的小细腿', price: 521, num: 0 },
+          { img: require('../../assets/love (12).jpg'), subTitle: '喵喵喵', info: '撒个娇，卖个萌，别撸代码了，来撸撸乖巧的晓可爱~', price: 1.12, num: 0 },
         ]},
         { title: '举高高', listNum: 0, list: [
-          { img: require('../../assets/love (7).jpg'), subTitle: '举高高', info: '要举高高~来挑战一下举重极限', price: 14, num: 0 }
+          { img: require('../../assets/love (4).jpg'), subTitle: '举高高', info: '要举高高~长再大也是小公举，也要抱抱举高高，快来挑战一下举重极限', price: 13, num: 0 },
+          { img: require('../../assets/love (3).jpg'), subTitle: '做饭饭', info: '给你个小爱心，赶紧去老娘做美味的大餐吧~', price: 14, num: 0 },
         ]},
         { title: '哄哄我', listNum: 0, list: [
-          { img: require('../../assets/love (2).jpg'), subTitle: '哄哄我', info: '也不哄哄人家，人家超想哭的，最后的机会，不然你也要完蛋', price: 521, num: 0 }
+          { img: require('../../assets/love (2).jpg'), subTitle: '哄哄我', info: '也不哄哄人家，人家超想哭的，最后的机会，不然你也要完蛋', price: 5.21, num: 0 },
         ]}
       ]
     }
@@ -138,9 +146,6 @@ export default {
 </script>
 
 <style scoped>
-.storeWrapper {
-  padding-bottom: 3.6em;
-}
 .storeTop {
   width: 100vw;
   padding: 3vw;
@@ -227,6 +232,10 @@ export default {
   padding: .3em;
   font-size: 2vw;
   line-height: 1;
+}
+.mainBar-content {
+  max-height: calc(100vh - 48vw);
+  overflow-y: scroll;
 }
 .mainBar-content li > p {
   background-color: #f8f8f8;

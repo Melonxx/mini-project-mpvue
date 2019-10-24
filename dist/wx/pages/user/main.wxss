@@ -1,7 +1,4 @@
 
-.storeWrapper.data-v-ee654148 {
-  padding-bottom: 3.6em;
-}
 .storeTop.data-v-ee654148 {
   width: 100vw;
   padding: 3vw;
@@ -91,6 +88,10 @@
   padding: .3em;
   font-size: 2vw;
   line-height: 1;
+}
+.mainBar-content.data-v-ee654148 {
+  max-height: calc(100vh - 48vw);
+  overflow-y: scroll;
 }
 .mainBar-content ._li > ._p.data-v-ee654148 {
   background-color: #f8f8f8;
