@@ -42,7 +42,7 @@
         <view class="_p data-v-ee654148">￥{{ calculateTotalPrice }}</view>
         <view class="_p data-v-ee654148">无需配送费</view>
       </view>
-      <view class="_div data-v-ee654148 button">去结算</view>
+      <view class="_div data-v-ee654148 button" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}">去结算</view>
     </view>
   </scroll-view>
 </template>

@@ -1,0 +1,9 @@
+<template name="2b292654">
+  <view class="_div data-v-297e8e66 wrapper"><label bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_span data-v-297e8e66">返回</label>
+    <view class="_div data-v-297e8e66 payImg">
+      <image src="/assets/pay.png" alt="mimi" class="_img data-v-297e8e66"></image>
+    </view>
+    <view class="_h1 data-v-297e8e66">支付成功</view>
+    <view class="_p data-v-297e8e66">请及时找商家核销</view>
+  </view>
+</template>

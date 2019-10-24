@@ -10,11 +10,6 @@
 
 <script>
 export default {
-  data () {
-    return {
-      motto: 'Hello miniprograme'
-    }
-  },
   methods: {
     goIn() {
       wx.navigateTo({

@@ -1,27 +1,14 @@
 require("../../common/manifest.js")
 require("../../common/vendor.js")
-global.webpackJsonpMpvue([1],[
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
+global.webpackJsonpMpvue([0],Array(18).concat([
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(19);
 
 
 
@@ -29,16 +16,16 @@ var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MOD
 app.$mount();
 
 /***/ }),
-/* 14 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_ee654148_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_ee654148_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(32);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(15)
+  __webpack_require__(20)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
@@ -82,13 +69,13 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 15 */
+/* 20 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 16 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -155,7 +142,7 @@ if (false) {(function () {
     return {
       scrollTop: 0,
       activeMenuIndex: 0,
-      menuList: [{ title: '🔥热销', listNum: 0, list: [{ img: __webpack_require__(28), subTitle: '说爱我', info: '这么久没腻歪，赶紧说爱我~', price: 2019, num: 0 }, { img: __webpack_require__(29), subTitle: '揉揉肩', info: '上班一天可真辛苦鸭~', price: 9, num: 0 }, { img: __webpack_require__(26), subTitle: '捏捏腿', info: '天天在运动减肥，怎么就不见人来捏捏腿，=。=', price: 27, num: 0 }] }, { title: '要亲亲', listNum: 0, list: [{ img: __webpack_require__(24), subTitle: '要亲亲', info: '要亲亲~来亲亲迷人的晓嘴唇', price: 520, num: 0 }, { img: __webpack_require__(32), subTitle: '要花花', info: '同事们都收到漂亮的fua fua了，我的呢~', price: 13.14, num: 0 }] }, { title: '要抱抱', listNum: 0, list: [{ img: __webpack_require__(27), subTitle: '要抱抱', info: '要抱抱~来抱抱晓可爱的小细腿', price: 521, num: 0 }, { img: __webpack_require__(33), subTitle: '喵喵喵', info: '撒个娇，卖个萌，别撸代码了，来撸撸乖巧的晓可爱~', price: 1.12, num: 0 }] }, { title: '举高高', listNum: 0, list: [{ img: __webpack_require__(31), subTitle: '举高高', info: '要举高高~长再大也是小公举，也要抱抱举高高，快来挑战一下举重极限', price: 13, num: 0 }, { img: __webpack_require__(30), subTitle: '做饭饭', info: '给你个小爱心，赶紧去老娘做美味的大餐吧~', price: 14, num: 0 }] }, { title: '哄哄我', listNum: 0, list: [{ img: __webpack_require__(25), subTitle: '哄哄我', info: '也不哄哄人家，人家超想哭的，最后的机会，不然你也要完蛋', price: 5.21, num: 0 }] }]
+      menuList: [{ title: '🔥热销', listNum: 0, list: [{ img: __webpack_require__(22), subTitle: '说爱我', info: '这么久没腻歪，赶紧说爱我~', price: 2019, num: 0 }, { img: __webpack_require__(23), subTitle: '揉揉肩', info: '上班一天可真辛苦鸭~', price: 9, num: 0 }, { img: __webpack_require__(24), subTitle: '捏捏腿', info: '天天在运动减肥，怎么就不见人来捏捏腿，=。=', price: 27, num: 0 }] }, { title: '要亲亲', listNum: 0, list: [{ img: __webpack_require__(25), subTitle: '要亲亲', info: '要亲亲~来亲亲迷人的晓嘴唇', price: 520, num: 0 }, { img: __webpack_require__(26), subTitle: '要花花', info: '同事们都收到漂亮的fua fua了，我的呢~', price: 13.14, num: 0 }] }, { title: '要抱抱', listNum: 0, list: [{ img: __webpack_require__(27), subTitle: '要抱抱', info: '要抱抱~来抱抱晓可爱的小细腿', price: 521, num: 0 }, { img: __webpack_require__(28), subTitle: '喵喵喵', info: '撒个娇，卖个萌，别撸代码了，来撸撸乖巧的晓可爱~', price: 1.12, num: 0 }] }, { title: '举高高', listNum: 0, list: [{ img: __webpack_require__(29), subTitle: '举高高', info: '要举高高~长再大也是小公举，也要抱抱举高高，快来挑战一下举重极限', price: 13, num: 0 }, { img: __webpack_require__(30), subTitle: '做饭饭', info: '给你个小爱心，赶紧去老娘做美味的大餐吧~', price: 14, num: 0 }] }, { title: '哄哄我', listNum: 0, list: [{ img: __webpack_require__(31), subTitle: '哄哄我', info: '也不哄哄人家，人家超想哭的，最后的机会，不然你也要完蛋', price: 5.21, num: 0 }] }]
     };
   },
 
@@ -215,12 +202,77 @@ if (false) {(function () {
       } else if (operator === 'add') {
         product.num += 1;
       }
+    },
+    payment: function payment() {
+      wx.navigateTo({
+        url: '../pay/main'
+      });
     }
   }
 });
 
 /***/ }),
-/* 17 */
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (6).jpg";
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (5).jpg";
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (7).jpg";
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (1).jpg";
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (11).jpg";
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (9).jpg";
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (12).jpg";
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (4).jpg";
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (3).jpg";
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "img/love (2).jpg";
+
+/***/ }),
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -312,7 +364,13 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   })]), _vm._v(" "), _c('div', {
     staticClass: "price"
   }, [_c('p', [_vm._v("￥" + _vm._s(_vm.calculateTotalPrice))]), _vm._v(" "), _c('p', [_vm._v("无需配送费")])], 1), _vm._v(" "), _c('div', {
-    staticClass: "button"
+    staticClass: "button",
+    attrs: {
+      "eventid": '3'
+    },
+    on: {
+      "click": _vm.payment
+    }
   }, [_vm._v("去结算")])])])
 }
 var staticRenderFns = []
@@ -326,71 +384,5 @@ if (false) {
   }
 }
 
-/***/ }),
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/love (1).jpg";
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/love (2).jpg";
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/love (7).jpg";
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/love (9).jpg";
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/love (6).jpg";
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/love (5).jpg";
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/love (3).jpg";
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/love (4).jpg";
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/love (11).jpg";
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/love (12).jpg";
-
 /***/ })
-],[13]);
+]),[18]);

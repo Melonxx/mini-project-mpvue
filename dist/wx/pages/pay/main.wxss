@@ -1,0 +1,26 @@
+
+.wrapper.data-v-297e8e66 {
+  text-align: center;
+  padding-top: 30vw;
+}
+._span.data-v-297e8e66 {
+  position: fixed;
+  top: 0;
+  color: #fff;
+  left: 3vw;
+  font-size: 4vw;
+  background-color: #aaa;
+  padding: 0 .2em;
+}
+.payImg ._img.data-v-297e8e66 {
+  width: 30vw;
+  height: 30vw;
+  margin: 0 auto;
+}
+._h1.data-v-297e8e66 {
+  margin-top: 3vw;
+}
+._p.data-v-297e8e66 {
+  color: #ddd;
+  font-size: 3vw;
+}

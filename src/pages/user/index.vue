@@ -50,7 +50,7 @@
         <p>￥{{ calculateTotalPrice }}</p>
         <p>无需配送费</p>
       </div>
-      <div class="button">去结算</div>
+      <div class="button" @click="payment">去结算</div>
     </div>
   </scroll-view>
 </template>
@@ -140,6 +140,11 @@ export default {
       } else if (operator === 'add') {
         product.num += 1
       }
+    },
+    payment() {
+      wx.navigateTo({
+        url: '../pay/main'
+      })
     }
   }
 }
